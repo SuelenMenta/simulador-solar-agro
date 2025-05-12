@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+    <title>Simulador Solar para o Agronegócio | Solar Energy</title>
+  
+    <meta name="description" content="Simule sua usina de energia solar com a SD Solar. Reduza até 90% da conta de luz. Projetos personalizados para o agronegócio no Paraná e São Paulo.">
+    <meta name="keywords" content="energia solar agronegócio, simulador solar rural, painel solar fazenda, usina solar no Paraná, usina solar em São Paulo, energia para propriedades rurais, SD Solar Maringá, projeto solar para produtores rurais">
+    <meta name="author" content="SD Solar">
+    <meta name="robots" content="index, follow">
+  
+    <!-- Open Graph -->
+    <meta property="og:title" content="Simulador Solar para o Agronegócio | SD Solar">
+    <meta property="og:description" content="Reduza custos com energia no campo. Simule sua usina solar com a SD Solar. Atendimento especializado no agronegócio.">
+    <meta property="og:image" content="images/usina-rural.png" alt="Usina Rural"/> <!-- Corrigido a tag -->
+            
+    <!-- Fontes e CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+
+    <header>
+        <img src="images/logo-solar-energy.png" alt="Logo Solar Energy" />
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Economize até 90% na sua conta de luz</h1>
+            <p>Faça agora a simulação gratuita do seu projeto de energia solar</p>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2>Simulador de Energia Solar</h2>
+        <form id="solarForm">
+            <div class="form-group">
+                <label>1. Qual é o tipo do local que irá instalar o gerador?</label>
+                <div class="type-buttons">
+                    <button type="button" onclick="selectType('Residencial')">Residencial</button>
+                    <button type="button" onclick="selectType('Empresarial')">Empresarial</button>
+                    <button type="button" onclick="selectType('Agronegócio')">Agronegócio</button>
+                    <button type="button" onclick="selectType('Sem conexão')">Sem conexão</button>
+                </div>
+                <input type="hidden" name="tipo_local" id="tipo_local">
+            </div>
+
+            <div class="form-group">
+                <label>2. Onde pretende realizar a instalação?</label>
+                <select id="estado" name="estado" onchange="atualizarCidades()" required>
+                    <option value="">Selecione o Estado</option>
+                    <option value="PR">Paraná</option>
+                    <option value="SP">São Paulo</option>
+                </select>
+                <br><br>
+                <select id="cidade" name="cidade" required>
+                    <option value="">Selecione a Cidade</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>3. Qual é o seu gasto médio mensal com energia (R$)?</label>
+                <input type="number" name="gasto" placeholder="Ex: 750" required>
+            </div>
+            <div class="form-group">
+                <label>4. Telefone</label>
+                <input type="number" name="gasto" placeholder="Ex: 4499999-9999" required>
+            </div>
+            <button type="submit" class="whatsapp-btn">Simular no WhatsApp</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+    <a href="https://wa.me/5544999999999" class="floating-whatsapp" target="_blank" title="Fale conosco pelo WhatsApp">
+        💬 Fale conosco
+    </a> 
+</body>
+<footer>
+    <p>© 2025 Solar Energy • CNPJ: 58.610.703/0001-11 • Maringá – PR</p>
+</footer>
+</html>
